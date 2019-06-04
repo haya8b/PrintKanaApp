@@ -1,0 +1,21 @@
+included:
+  - PrintKanaApp/
+excluded:
+  - Pods/
+opt_in_rules:
+  - private_outlet
+disabled_rules:
+  - trailing_whitespace
+  - force_cast
+line_length: 300
+function_body_length:
+- 100 # warning
+- 300 # error
+identifier_name:
+ min_length: 1
+ max_length: 50
+type_name:
+ min_length: 1
+ max_length: 50
+type_body_length: 500
+file_length: 500
