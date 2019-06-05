@@ -10,9 +10,12 @@
 		72E699A3F760FA3DF67AEBD2 /* Pods_PrintKanaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72046CAC0D327ADD57F000A7 /* Pods_PrintKanaApp.framework */; };
 		765B1CE0957AF2D96D5849BE /* Pods_PrintKanaAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D149FD6CA0E38848E67799BA /* Pods_PrintKanaAppTests.framework */; };
 		A08379607AE71BDDA561BDEE /* Pods_PrintKanaAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A82A0A3930DFA7F2CE011E /* Pods_PrintKanaAppUITests.framework */; };
+		E0C6EA4122A7E35C0038BF6C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6EA4022A7E35C0038BF6C /* InputViewController.swift */; };
+		E0C6EA4322A7E3BA0038BF6C /* InputStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C6EA4222A7E3BA0038BF6C /* InputStoryboard.storyboard */; };
+		E0C6EA4622A7FFCE0038BF6C /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6EA4422A7FFCE0038BF6C /* OutputViewController.swift */; };
+		E0C6EA4922A800E70038BF6C /* OutputStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C6EA4822A800E70038BF6C /* OutputStoryboard.storyboard */; };
+		E0C6EA4B22A80E610038BF6C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6EA4A22A80E610038BF6C /* R.generated.swift */; };
 		E0D78E2F22A6C09100A290FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D78E2E22A6C09100A290FF /* AppDelegate.swift */; };
-		E0D78E3122A6C09100A290FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D78E3022A6C09100A290FF /* ViewController.swift */; };
-		E0D78E3422A6C09100A290FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D78E3222A6C09100A290FF /* Main.storyboard */; };
 		E0D78E3622A6C09300A290FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D78E3522A6C09300A290FF /* Assets.xcassets */; };
 		E0D78E3922A6C09300A290FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D78E3722A6C09300A290FF /* LaunchScreen.storyboard */; };
 		E0D78E4422A6C09300A290FF /* PrintKanaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D78E4322A6C09300A290FF /* PrintKanaAppTests.swift */; };
@@ -43,10 +46,13 @@
 		8BB930022CD26707E3A528FF /* Pods-PrintKanaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintKanaApp.debug.xcconfig"; path = "Target Support Files/Pods-PrintKanaApp/Pods-PrintKanaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D149FD6CA0E38848E67799BA /* Pods_PrintKanaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrintKanaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A84FE618B23DD4784FFD13 /* Pods-PrintKanaAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintKanaAppTests.release.xcconfig"; path = "Target Support Files/Pods-PrintKanaAppTests/Pods-PrintKanaAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0C6EA4022A7E35C0038BF6C /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		E0C6EA4222A7E3BA0038BF6C /* InputStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputStoryboard.storyboard; sourceTree = "<group>"; };
+		E0C6EA4422A7FFCE0038BF6C /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		E0C6EA4822A800E70038BF6C /* OutputStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OutputStoryboard.storyboard; sourceTree = "<group>"; };
+		E0C6EA4A22A80E610038BF6C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E0D78E2B22A6C09100A290FF /* PrintKanaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintKanaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D78E2E22A6C09100A290FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0D78E3022A6C09100A290FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0D78E3322A6C09100A290FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0D78E3522A6C09300A290FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0D78E3822A6C09300A290FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0D78E3A22A6C09300A290FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +118,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E0C6EA3C22A7384F0038BF6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0C6EA4022A7E35C0038BF6C /* InputViewController.swift */,
+				E0C6EA4222A7E3BA0038BF6C /* InputStoryboard.storyboard */,
+				E0C6EA4422A7FFCE0038BF6C /* OutputViewController.swift */,
+				E0C6EA4822A800E70038BF6C /* OutputStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0C6EA3E22A7387F0038BF6C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		E0C6EA3F22A738950038BF6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E0D78E2222A6C09100A290FF = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +168,11 @@
 		E0D78E2D22A6C09100A290FF /* PrintKanaApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0C6EA4A22A80E610038BF6C /* R.generated.swift */,
+				E0C6EA3F22A738950038BF6C /* Models */,
+				E0C6EA3E22A7387F0038BF6C /* Presenters */,
+				E0C6EA3C22A7384F0038BF6C /* Views */,
 				E0D78E2E22A6C09100A290FF /* AppDelegate.swift */,
-				E0D78E3022A6C09100A290FF /* ViewController.swift */,
-				E0D78E3222A6C09100A290FF /* Main.storyboard */,
 				E0D78E3522A6C09300A290FF /* Assets.xcassets */,
 				E0D78E3722A6C09300A290FF /* LaunchScreen.storyboard */,
 				E0D78E3A22A6C09300A290FF /* Info.plist */,
@@ -275,9 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C6EA4922A800E70038BF6C /* OutputStoryboard.storyboard in Resources */,
 				E0D78E3922A6C09300A290FF /* LaunchScreen.storyboard in Resources */,
 				E0D78E3622A6C09300A290FF /* Assets.xcassets in Resources */,
-				E0D78E3422A6C09100A290FF /* Main.storyboard in Resources */,
+				E0C6EA4322A7E3BA0038BF6C /* InputStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +473,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D78E3122A6C09100A290FF /* ViewController.swift in Sources */,
+				E0C6EA4122A7E35C0038BF6C /* InputViewController.swift in Sources */,
+				E0C6EA4622A7FFCE0038BF6C /* OutputViewController.swift in Sources */,
 				E0D78E2F22A6C09100A290FF /* AppDelegate.swift in Sources */,
+				E0C6EA4B22A80E610038BF6C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,14 +512,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E0D78E3222A6C09100A290FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E0D78E3322A6C09100A290FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E0D78E3722A6C09300A290FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

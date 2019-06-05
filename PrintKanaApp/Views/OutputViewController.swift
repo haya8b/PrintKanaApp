@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OutputViewController.swift
 //  PrintKanaApp
 //
 //  Created by 片岡勇人 on 2019/06/05.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class OutputViewController: UIViewController {
+    
+    // MARK: - IBOutlet
+
+    @IBOutlet private weak var outputLabel: UILabel!
+    
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
 }
-

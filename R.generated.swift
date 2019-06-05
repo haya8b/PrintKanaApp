@@ -16,21 +16,48 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  struct segue {
+    /// This struct is generated for `InputViewController`, and contains static references to 1 segues.
+    struct inputViewController {
+      /// Segue identifier `toOutput`.
+      static let toOutput: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, InputViewController, OutputViewController> = Rswift.StoryboardSegueIdentifier(identifier: "toOutput")
+      
+      /// Optionally returns a typed version of segue `toOutput`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func toOutput(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, InputViewController, OutputViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.inputViewController.toOutput, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `InputStoryboard`.
+    static let inputStoryboard = _R.storyboard.inputStoryboard()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
+    /// Storyboard `OutputStoryboard`.
+    static let outputStoryboard = _R.storyboard.outputStoryboard()
+    
+    /// `UIStoryboard(name: "InputStoryboard", bundle: ...)`
+    static func inputStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.inputStoryboard)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
     }
     
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
+    /// `UIStoryboard(name: "OutputStoryboard", bundle: ...)`
+    static func outputStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.outputStoryboard)
     }
     
     fileprivate init() {}
@@ -56,8 +83,23 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try inputStoryboard.validate()
       try launchScreen.validate()
-      try main.validate()
+      try outputStoryboard.validate()
+    }
+    
+    struct inputStoryboard: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+      
+      let bundle = R.hostingBundle
+      let name = "InputStoryboard"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -74,11 +116,11 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
+    struct outputStoryboard: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = OutputViewController
       
       let bundle = R.hostingBundle
-      let name = "Main"
+      let name = "OutputStoryboard"
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
