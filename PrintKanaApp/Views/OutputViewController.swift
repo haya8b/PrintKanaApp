@@ -10,6 +10,9 @@ import UIKit
 
 final class OutputViewController: UIViewController {
     
+    // Input画面から値を受け取る
+    var convertHiragana: ConvertHiragana!
+    
     // MARK: - IBOutlet
 
     @IBOutlet private weak var outputLabel: UILabel!
@@ -18,6 +21,8 @@ final class OutputViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        outputLabel.text = convertHiragana.converted
     }
 
 }

@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Moya
+import Toast_Swift
+
+protocol InputViewProtcol: class {
+    func showSpinnerToast()
+    func successHiraganaAPI()
+    func errorHiraganaAPI()
+}
 
 final class InputViewController: UIViewController {
+    
+    private lazy var inputPresenter = InputPresenter(viewProtcol: self)
 
     // MARK: - IBOutlet
     
@@ -41,7 +51,12 @@ final class InputViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func tappedConvertKanaButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: R.segue.inputViewController.toOutput, sender: nil)
+        guard let inputText = inputTextField.text, !inputText.isEmpty else {
+            self.view.makeToast("文字が入力されていません")
+            return
+        }
+        
+        inputPresenter.requestHiraganaAPI(sentence: inputText)
     }
     
     @IBAction func tappedView(_ sender: UITapGestureRecognizer) {
@@ -49,7 +64,7 @@ final class InputViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    // MARK: - Private
+    // MARK: - PrivateMethods
 
     ///  キーボード表示時
     ///
@@ -75,6 +90,25 @@ final class InputViewController: UIViewController {
     @objc private func handleKeyboardWillHideNotification(_ notification: Notification) {
         // スクロール位置を初期化
         scrollView.contentOffset.y = 0
+    }
+}
+
+
+// MARK: - InputViewProtcol
+
+extension InputViewController: InputViewProtcol {
+    
+    func successHiraganaAPI() {
+        self.view.hideToastActivity()
+    }
+    
+    func errorHiraganaAPI() {
+        self.view.makeToast("API エラー")
+        self.view.hideToastActivity()
+    }
+    
+    func showSpinnerToast() {
+        self.view.makeToastActivity(.center)
     }
 }
 
