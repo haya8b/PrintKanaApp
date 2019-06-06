@@ -16,6 +16,20 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.file` struct is generated, and contains static references to 1 files.
+  struct file {
+    /// Resource file `HiraganaAPIStub.json`.
+    static let hiraganaAPIStubJson = Rswift.FileResource(bundle: R.hostingBundle, name: "HiraganaAPIStub", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "HiraganaAPIStub", withExtension: "json")`
+    static func hiraganaAPIStubJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.hiraganaAPIStubJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
     /// This struct is generated for `InputViewController`, and contains static references to 1 segues.
