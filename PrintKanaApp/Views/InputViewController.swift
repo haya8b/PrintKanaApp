@@ -64,6 +64,15 @@ final class InputViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    // MARK: - PrepareForSegue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == R.segue.inputViewController.toOutput.identifier,
+            let outputViewController = segue.destination as? OutputViewController {
+            outputViewController.convertHiragana = inputPresenter.getConvertHiraganaData()
+        }
+    }
+    
     // MARK: - PrivateMethods
 
     ///  キーボード表示時
@@ -100,6 +109,7 @@ extension InputViewController: InputViewProtcol {
     
     func successHiraganaAPI() {
         self.view.hideToastActivity()
+        self.performSegue(withIdentifier: R.segue.inputViewController.toOutput, sender: nil)
     }
     
     func errorHiraganaAPI() {
