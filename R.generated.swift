@@ -30,6 +30,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `background_img`.
+    static let background_img = Rswift.ImageResource(bundle: R.hostingBundle, name: "background_img")
+    
+    /// `UIImage(named: "background_img", bundle: ..., traitCollection: ...)`
+    static func background_img(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.background_img, compatibleWith: traitCollection)
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
     /// This struct is generated for `InputViewController`, and contains static references to 1 segues.
@@ -109,6 +122,7 @@ struct _R: Rswift.Validatable {
       let name = "InputStoryboard"
       
       static func validate() throws {
+        if UIKit.UIImage(named: "background_img", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'background_img' is used in storyboard 'InputStoryboard', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }
@@ -137,6 +151,7 @@ struct _R: Rswift.Validatable {
       let name = "OutputStoryboard"
       
       static func validate() throws {
+        if UIKit.UIImage(named: "background_img", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'background_img' is used in storyboard 'OutputStoryboard', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }

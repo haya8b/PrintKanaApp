@@ -319,6 +319,7 @@
 				TargetAttributes = {
 					E0D78E2A22A6C09100A290FF = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					E0D78E3E22A6C09300A290FF = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -697,6 +698,7 @@
 			buildSettings = {
 				API_BASE_URL = "https://labs.goo.ne.jp/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PPRG4S96Q;
 				INFOPLIST_FILE = PrintKanaApp/Info.plist;
@@ -706,6 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hayato.PrintKanaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -717,6 +720,7 @@
 			buildSettings = {
 				API_BASE_URL = "https://labs.goo.ne.jp/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PPRG4S96Q;
 				INFOPLIST_FILE = PrintKanaApp/Info.plist;

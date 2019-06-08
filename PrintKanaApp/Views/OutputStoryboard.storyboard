@@ -18,17 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9h-zy-jYc">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_img" translatesAutoresizingMaskIntoConstraints="NO" id="dd9-yZ-kHa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HF-Dt-7hF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jcg-KB-wkd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9h-zy-jYc">
+                                <rect key="frame" x="44" y="448" width="326" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="O9h-zy-jYc" firstAttribute="centerY" secondItem="D6M-R1-vY4" secondAttribute="centerY" id="113-bH-4k7"/>
+                            <constraint firstItem="dd9-yZ-kHa" firstAttribute="leading" secondItem="MRD-dh-YfP" secondAttribute="leading" id="6rk-X8-7LY"/>
+                            <constraint firstAttribute="bottom" secondItem="0HF-Dt-7hF" secondAttribute="bottom" id="DvW-oI-5cR"/>
+                            <constraint firstItem="MRD-dh-YfP" firstAttribute="trailing" secondItem="0HF-Dt-7hF" secondAttribute="trailing" id="SaX-XS-Ua4"/>
+                            <constraint firstItem="0HF-Dt-7hF" firstAttribute="top" secondItem="D6M-R1-vY4" secondAttribute="top" id="Yoz-60-XvS"/>
+                            <constraint firstItem="MRD-dh-YfP" firstAttribute="trailing" secondItem="O9h-zy-jYc" secondAttribute="trailing" constant="44" id="azi-9B-CnQ"/>
+                            <constraint firstItem="O9h-zy-jYc" firstAttribute="leading" secondItem="MRD-dh-YfP" secondAttribute="leading" constant="44" id="iOk-jd-4ts"/>
+                            <constraint firstItem="0HF-Dt-7hF" firstAttribute="leading" secondItem="MRD-dh-YfP" secondAttribute="leading" id="kSC-hU-dMk"/>
                             <constraint firstItem="O9h-zy-jYc" firstAttribute="centerX" secondItem="D6M-R1-vY4" secondAttribute="centerX" id="kXt-ZY-Q1p"/>
+                            <constraint firstItem="dd9-yZ-kHa" firstAttribute="top" secondItem="D6M-R1-vY4" secondAttribute="top" id="v9h-Xx-t7c"/>
+                            <constraint firstAttribute="bottom" secondItem="dd9-yZ-kHa" secondAttribute="bottom" id="xMA-VL-xsD"/>
+                            <constraint firstItem="MRD-dh-YfP" firstAttribute="trailing" secondItem="dd9-yZ-kHa" secondAttribute="trailing" id="yRk-w4-Yaj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MRD-dh-YfP"/>
                     </view>
@@ -38,7 +59,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCK-Gn-XzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="86"/>
+            <point key="canvasLocation" x="150.72463768115944" y="85.714285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_img" width="364" height="242"/>
+    </resources>
 </document>
